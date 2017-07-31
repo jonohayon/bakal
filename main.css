@@ -3,6 +3,9 @@ html, body {
   height: 100%;
   margin: 0;
   padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .background {
@@ -10,15 +13,12 @@ html, body {
   top: 0; bottom: 0;
   left: 0; right: 0;
   background-image: url(http://i144.photobucket.com/albums/r189/skateflip1717/flashing_colors.gif); 
-  animation: 0s fadeIn forwards 3s;
+  animation: 0s fadeIn forwards 17s;
   opacity: 0;
   z-index: 1;
 }
 
 h1 {
-  position: absolute;
-  left: 50%; top: 50%;
-  transform: translate(-50%, -50%);
   z-index: 10;
   transition: background-color 2s ease-in-out;
   font-family: 'Assistant', sans-serif;
@@ -31,10 +31,14 @@ h1 {
 }
 
 .bakal, .l { animation: .196s changeColors infinite; } 
-.text { animation: .2875s whiteText forwards 3s; }
+.text { animation: .2875s whiteText forwards 17s; }
 
-.bakal { animation-delay: 1s; }
-.l { display: none; }
+.bakal { animation-delay: 8.75s; }
+
+.l {
+  display: none;
+  transition: all .3s;
+}
 
 /* Rapidly change text colors */
 @keyframes changeColors {
@@ -51,6 +55,7 @@ h1 {
   100% { opacity: 1; }
 }
 
+/* Turn the text white with delay */
 @keyframes whiteText {
   0% { color: #000; }
   100% { color: #fff; }
